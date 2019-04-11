@@ -56,7 +56,7 @@
 //
 import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
-// import App from '../app.vue'
+import App from '../app.vue'
 //
 Vue.use(TurbolinksAdapter)
 
@@ -79,3 +79,7 @@ document.addEventListener('turbolinks:load', () => {
 // })
 
 console.log('Hello World from Webpacker')
+
+import * as searchView from './views/searchView'
+var string = 'kevin'
+console.log(`Using imported functions! ${searchView.add(searchView.ID, 2)} and ${searchView.multiply(4, 9)}, and ${string}`);
