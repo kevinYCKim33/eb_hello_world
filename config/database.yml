@@ -79,7 +79,14 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: kev_webpack_test_production
-  username: kev_webpack_test
-  password: <%= ENV['KEV_WEBPACK_TEST_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  pool: 5
+  port: 5432
+  reaping_frequency: 50
+  sslmode: require
+  checkout_timeout: 20
+  database: ebdb
+  username: <%= ENV['DB_USER']%>
+  password: <%= ENV['POSTGRES_PW']%>
+  host: <%= ENV['DB_HOST']%>
+  min_messages: warning
