@@ -54,19 +54,19 @@
 //
 // Then uncomment the code block below:
 //
-// import TurbolinksAdapter from 'vue-turbolinks'
-// import Vue from 'vue/dist/vue.esm'
-// import App from '../app.vue'
-// //
-// Vue.use(TurbolinksAdapter)
-// //
-// document.addEventListener('turbolinks:load', () => {
-//   var app6 = new Vue({
-//     el: '#app-6',
-//     data: {
-//       message: 'Hello Vue!'
-//     }
-//   })
-// })
+import TurbolinksAdapter from 'vue-turbolinks'
+import Vue from 'vue/dist/vue.esm'
+import App from '../app.vue'
+//
+Vue.use(TurbolinksAdapter)
+//
+document.addEventListener('turbolinks:load', () => {
+  var app6 = new Vue({
+    el: '#app-6',
+    data: {
+      message: 'Hello Vue!'
+    }
+  })
+})
 
 console.log('Hello World from Webpacker')
