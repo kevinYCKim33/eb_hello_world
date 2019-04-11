@@ -5,18 +5,18 @@
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
-// import Vue from 'vue'
-// import App from '../app.vue'
-//
-// document.addEventListener('DOMContentLoaded', () => {
-//   const el = document.body.appendChild(document.createElement('hello'))
-//   const app = new Vue({
-//     el,
-//     render: h => h(App)
-//   })
-//
-//   console.log(app)
-// })
+import Vue from 'vue'
+import App from '../app.vue'
+
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.body.appendChild(document.createElement('hello'))
+  const app = new Vue({
+    el,
+    render: h => h(App)
+  })
+
+  console.log(app)
+})
 
 
 // The above code uses Vue without the compiler, which means you cannot
@@ -54,32 +54,20 @@
 //
 // Then uncomment the code block below:
 //
-import TurbolinksAdapter from 'vue-turbolinks'
-import Vue from 'vue/dist/vue.esm'
-import App from '../app.vue'
+// import TurbolinksAdapter from 'vue-turbolinks'
+// import Vue from 'vue/dist/vue.esm'
+// import App from '../app.vue'
 //
-Vue.use(TurbolinksAdapter)
-
-document.addEventListener('turbolinks:load', () => {
-  var app6 = new Vue({
-    el: '#app-6',
-    data: {
-      message: 'Hello Vue!'
-    }
-  })
-})
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     var app6 = new Vue({
-//       el: '#app-6',
-//       data: {
-//         message: 'Hello Vue!'
+// Vue.use(TurbolinksAdapter)
+//
+// document.addEventListener('turbolinks:load', () => {
+//   const app = new Vue({
+//     el: '#hello',
+//     data: () => {
+//       return {
+//         message: "Can you say hello?"
 //       }
-//     })
+//     },
+//     components: { App }
+//   })
 // })
-
-console.log('Hello World from Webpacker')
-
-import * as searchView from './views/searchView'
-var string = 'kevin'
-console.log(`Using imported functions! ${searchView.add(searchView.ID, 2)} and ${searchView.multiply(4, 9)}, and ${string}`);
