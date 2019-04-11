@@ -19,6 +19,11 @@ kevinkim-# \quit
 Created database 'name_of_project_development'
 Created database 'name_of_project_test'
 
+Rails master key stuff for 5.2
+
+https://www.engineyard.com/blog/rails-encrypted-credentials-on-rails-5.2
+
+
 
 do eb init -i
 
