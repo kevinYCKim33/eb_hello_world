@@ -5,7 +5,7 @@
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
-// import Vue from 'vue'
+// import Vue from 'vue.esm'
 // import App from '../app.vue'
 //
 // document.addEventListener('DOMContentLoaded', () => {
@@ -33,18 +33,20 @@
 // </div>
 
 
-import Vue from 'vue/dist/vue.esm'
-import App from '../app.vue'
+// import Vue from 'vue/dist/vue.esm'
+// import Vue from 'vue/dist/vue.esm'
 
-document.addEventListener('DOMContentLoaded', () => {
-  const app = new Vue({
-    el: '#hello',
-    data: {
-      message: "Can you say hello?"
-    },
-    // components: { App }
-  })
-})
+// import App from '../app.vue'
+//
+// document.addEventListener('DOMContentLoaded', () => {
+//   const app = new Vue({
+//     el: '#hello',
+//     data: {
+//       message: "Can you say hello?"
+//     },
+//     // components: { App }
+//   })
+// })
 //
 //
 //
@@ -54,20 +56,18 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 // Then uncomment the code block below:
 //
-// import TurbolinksAdapter from 'vue-turbolinks'
-// import Vue from 'vue/dist/vue.esm'
-// import App from '../app.vue'
+import TurbolinksAdapter from 'vue-turbolinks'
+import Vue from 'vue/dist/vue.esm'
+import App from '../app.vue'
+
 //
-// Vue.use(TurbolinksAdapter)
+Vue.use(TurbolinksAdapter)
 //
-// document.addEventListener('turbolinks:load', () => {
-//   const app = new Vue({
-//     el: '#hello',
-//     data: () => {
-//       return {
-//         message: "Can you say hello?"
-//       }
-//     },
-//     components: { App }
-//   })
-// })
+document.addEventListener('turbolinks:load', () => {
+  var app6 = new Vue({
+    el: '#app-6',
+    data: {
+      message: 'Hello Vue!'
+    }
+  })
+})
